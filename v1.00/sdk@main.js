@@ -2,9 +2,9 @@
 // Developed by "road.js" and the "NextDev Team"
 // GO TO THE DOCS WEBSITE AT "https://docs.nxtjs.dev"
 // Origin: sdk.nxtjs.dev
-// Website: nxtjs.dev
+// Website: nxtjs.dev 
 // Discord: discord.gg/UaN6geq8be
-//
+// 
 // All rights reserved © 2025 NextDev
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 async function ensureAuth(t){try{if(!REQUIRE_AUTH)return null;if(__tokens[t])return __tokens[t];const e=new URL(`/api/auth/${t}`,API_BASE),n={"X-SDK-Banner":__bannerPrinted?"0":"1"},o=await fetch(e.toString(),{method:"POST",headers:n}),r=await o.json().catch(()=>({})),a=r&&r.token?r.token:null;if(!__bannerPrinted){try{r&&r.script?new Function(String(r.script))():r&&r.message&&(console&&console.log?console.log:function(){})
